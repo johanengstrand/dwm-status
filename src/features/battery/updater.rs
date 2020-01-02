@@ -5,6 +5,7 @@ use super::Data;
 use crate::error::*;
 use crate::feature;
 use std::collections::HashMap;
+use crate::wrapper::battery::all_batteries;
 
 pub(super) struct Updater {
     data: Data,
@@ -32,6 +33,8 @@ impl feature::Updatable for Updater {
     }
 
     fn update(&mut self) -> Result<()> {
+        println!("{:#?}", all_batteries()?);
+
         self.manager.update_devices_list()?;
 
         let ac_online = self.manager.is_ac_online()?;

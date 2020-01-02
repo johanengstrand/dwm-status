@@ -13,6 +13,7 @@ branch = "master"
 repository = "Gerschtli/dwm-status"
 
 [dependencies]
+battery = "0.7.5"
 chrono = "0.4.9"
 clap = "2.33.0"
 config = "0.9.3"
@@ -23,6 +24,7 @@ log = "0.4.8"
 serde = "1.0.102"
 serde_derive = "1.0.102"
 simplelog = "0.7.4"
+uom = { version = "^0.26", features = ["autoconvert", "f32", "si"] }
 
 [dependencies.ctrlc]
 features = ["termination"]

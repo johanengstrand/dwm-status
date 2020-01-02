@@ -12,8 +12,8 @@ stdenv.mkDerivation {
     xorg.libX11
 
     # run-time dependencies
-    alsaUtils
-    coreutils
+    #alsaUtils
+    #coreutils
     dnsutils
     iproute
     wirelesstools
